@@ -114,13 +114,6 @@ Los sensores renderizados (`gpu_lidar`, cámaras) necesitan acceso a un servidor
 - Probado en Ubuntu 24.04 con ROS 2 Jazzy y Gazebo Harmonic 8 de los paquetes `ros-jazzy-ros-gz`, en una máquina virtual con render por software.
   No se ha probado con Gazebo Harmonic instalado sin ROS 2 (`gz-harmonic`).
 
-
-- Mapa: resolución **0,01 m/píxel**, 1586 × 1422 píxeles (15,86 × 14,22 m), origen **(−0,1132, −0,0612)** (esquina inferior izquierda).
-- Pose de inicio sugerida para un robot: vestíbulo, frente a la puerta de entrada (puerta 4): **x = 6,597, y = 1,163, yaw = 0°** (`mapa/zonas_prohibidas.yaml`).
-  Ejemplo para añadir un modelo propio desde otra terminal con el mundo abierto:
-  `gz service -s /world/casa_jose/create --reqtype gz.msgs.EntityFactory --reptype gz.msgs.Boolean --timeout 5000 --req 'sdf_filename: "<tu_modelo>.sdf", pose: {position: {x: 6.597, y: 1.163, z: 0.05}}'`
-- Pasos estrechos (supuestos): pasillo de ~0,885 m; puertas interiores ~0,88–0,90 m.
-
 ## Licencia y origen
 Todo el contenido (mundo, modelos, mallas y mapas) lo ha **generado el equipo SocialTech** para este ensayo a partir del plano de la vivienda.
 **No incluye modelos ni texturas de terceros.** La malla de muros se generó con la herramienta pública *map2sdf* (Apache-2.0; su cabecera STL lo indica); el paquete no contiene su código. Representa una vivienda particular con **geometría aproximada**: se publica solo para pruebas de simulación; no es un plano de la vivienda.
